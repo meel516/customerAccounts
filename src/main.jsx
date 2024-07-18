@@ -7,9 +7,12 @@ import Customers from './Customers.jsx';
 import Profile from './Profile.jsx';
 import Account from './Account.jsx';
 import ProfileContainer from './ProfileContainer/ProfileContainer.jsx';
+import { Provider } from 'react-redux';
+import { store } from './store/store.js';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <Provider store={store}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
@@ -22,5 +25,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </Route>
       </Routes>
     </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );

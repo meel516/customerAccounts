@@ -1,6 +1,9 @@
 import { Outlet } from 'react-router-dom';
+import { useGetCustomersQuery } from './services/api';
 
 export default function Customers() {
+  const { data, error, isLoading } = useGetCustomersQuery();
+  console.log(data,"saleem")
   return (
     <>
       <div className="overflow-x-auto col-span-10">
